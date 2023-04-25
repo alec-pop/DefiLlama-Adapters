@@ -1,0 +1,50 @@
+const { nullAddress, treasuryExports } = require("../helper/treasury");
+
+const daoPolygon = "0xa49731448a1b25d92F3d80f3d3025e4F0fC8d776";
+const daoMainnet = "0x265c6BF7464d13388Ee6787bd0Ee5634CfB631AD";
+const daoOptimism = "0xf10c976E594E8b8269F36121136247082329cd1F";
+const popstarPolygon = "0xe88F387Aedb091b6c57136c5Eea20644906a3FaC";
+const popstarMainnet = "0x6B1741143D3F2C4f1EdA12e19e9518489DF03e04";
+const popTreasury = "0x93A32401D3E1425AD7b3E118816A1B900E714d18";
+const aragon = "0x0Ec6290aBb4714ba5f1371647894Ce53c6dD673a";
+
+const POPMainnet = "0xD0Cd466b34A24fcB2f87676278AF2005Ca8A78c4";
+const POPPolygon = "0xC5B57e9a1E7914FDA753A88f24E5703e617Ee50c";
+const POPOptimism = "0x6F0fecBC276de8fC69257065fE47C5a03d986394";
+
+
+module.exports = treasuryExports({
+  polygon: {
+    tokens: [ 
+        nullAddress,
+        '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',//USDC polygon
+
+     ],
+    owners: [popstarPolygon, daoPolygon],
+    ownTokens: [POPPolygon],
+  },
+  
+ module.exports = treasuryExports({
+  optimism: {
+    tokens: [ 
+        nullAddress,
+        '0x7F5c764cBc14f9669B88837ca1490cCa17c31607',//USDC optimism
+
+     ],
+    owners: [daoOptimism],
+    ownTokens: [POPOptimism],
+  },
+  
+ module.exports = treasuryExports({
+  ethereum: {
+    tokens: [ 
+        nullAddress,
+        '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',//USDC mainnet
+        '0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86',//OUSD
+        '0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84',//STETH
+     ],
+    owners: [daoMainnet, popstarMainnet, popTreasury, aragon],
+    ownTokens: [POPMainnet],
+  },
+ 
+})
